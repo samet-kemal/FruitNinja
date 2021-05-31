@@ -8,6 +8,7 @@ public class Fruit {
     public static float radius = 60f;
     Type type;
     Vector2 pos, velocity;
+    public boolean living = true;
 
     Fruit(Vector2 pos, Vector2 velocity) {
         this.pos = pos;
