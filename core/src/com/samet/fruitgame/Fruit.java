@@ -1,5 +1,6 @@
 package com.samet.fruitgame;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 
 public class Fruit {
@@ -29,7 +30,11 @@ public class Fruit {
     }
 
     public void update(float dt) {
+        velocity.y -= dt * (Gdx.graphics.getHeight() * 0.25f);
+        velocity.x -= dt * Math.signum(velocity.x) * 5f;
+
         pos.mulAdd(velocity, dt);
+
     }
 
     public enum Type {
